@@ -10802,4 +10802,24 @@ textarea.form-control-lg {
 
 .left-bar {
   width: 400px;
+}
+
+.my-m {
+  margin-left: 15px;
+}
+
+.my-bg-color {
+  background-color: #121212;
+}
+
+.my-btn-bg {
+  background-color: #2a2a2a;
+}
+
+button:hover {
+  background-color: rgba(141, 141, 141, 0.328) !important;
+}
+
+svg {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
