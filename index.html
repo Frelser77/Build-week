@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/circular-font.css" />
-    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
-    <title>Spostifake</title>
-  </head>
-  <body>
-    <h1>SpotiFake</h1>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./JS/index.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Simulation of a Soostify page for exame of API" />
+		<link rel="stylesheet" href="./assets/dist/css/style.min.css" />
+		<link rel="stylesheet" href="./assets/css/circular-font.css" />
+		<title>Spostifake</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-auto sticky-top bg-dark vh-100">
+					<!-- Contenuti della sidebar sinistra (navigazione) -->
+					<h1 class="text-light">ciao funziona</h1>
+				</div>
+
+				<div class="col">
+					<!-- Contenuto principale qui (album, artista, ecc.) -->
+				</div>
+
+				<div class="col-auto sticky-top bg-dark vh-100">
+					<!-- Contenuti della sidebar destra (attività amici, ecc.) -->
+					<h2 class="text-light">funziona anche qui</h2>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer fixed-bottom bg-dark text-light">
+			<!-- Barra del player inferiore -->
+		</footer>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<script src="./JS/index.js" type="module"></script>
+	</body>
 </html>
