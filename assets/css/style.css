@@ -10794,4 +10794,12 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.container-my {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.left-bar {
+  width: 400px;
 }/*# sourceMappingURL=style.css.map */

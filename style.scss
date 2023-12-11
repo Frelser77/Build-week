@@ -1,1 +1,10 @@
 @import "bootstrap-overrides.scss";
+
+.container-my {
+	max-width: 1000px;
+	margin-inline: auto;
+}
+
+.left-bar {
+	width: 400px;
+}
