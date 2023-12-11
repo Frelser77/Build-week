@@ -1,1 +1,1 @@
-import "token.js";
+import { token } from "./token.js";
