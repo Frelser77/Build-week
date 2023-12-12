@@ -1,4 +1,7 @@
 @import "bootstrap-overrides.scss";
+:root {
+	--bs-link-hover-color: #fff;
+}
 
 // Variabili per i colori
 $primary-color: #121212;
@@ -12,23 +15,27 @@ $text-color: white;
 // Variabili per le dimensioni
 $footer-height: 80px;
 $max-container-width: 1000px;
-$left-bar-width: 400px;
+// $left-bar-width: 400px;
 $gap-btn-container: 8px;
 $scrollbar-width: 10px;
 $margin-left-custom: 15px;
 $btn-padding: 0.3rem 0.6rem;
 $btn-font-size: 0.9rem;
-$playlist-max-height: calc(100vh - 320px);
+// $playlist-max-height: calc(100vh - 320px);
 
 .container-my {
 	max-width: $max-container-width;
 	margin-inline: auto;
 }
 
-.left-bar {
-	width: $left-bar-width;
-	height: 100%;
+.my-text-secondary {
+	color: #6c757d;
 }
+
+// .left-bar {
+// 	// width: $left-bar-width;
+// 	height: 100vh;
+// }
 
 .my-m {
 	margin-left: $margin-left-custom;
@@ -64,9 +71,51 @@ svg {
 	cursor: pointer;
 }
 
-.hover {
+.home-container {
+	.home-text h5,
+	.home-icon path {
+		transition: color 0.3s ease, fill 0.3s ease;
+	}
+
 	&:hover {
-		color: $text-color;
+		.home-text h5 {
+			color: #ffffff;
+		}
+		.home-icon path {
+			fill: #ffffff;
+		}
+	}
+}
+
+.search-container {
+	.search-icon path,
+	.search-text h5 {
+		transition: fill 0.3s ease, color 0.3s ease;
+	}
+
+	&:hover {
+		.search-icon path {
+			fill: #fff;
+		}
+		.search-text h5 {
+			color: #fff;
+		}
+	}
+}
+
+.container-hover {
+	.Library-icon path,
+	.Library-text h5 {
+		transition: fill 0.3s ease, color 0.3s ease;
+	}
+
+	&:hover {
+		.Library-icon path {
+			fill: #fff;
+		}
+		.Library-text h5 {
+			color: #fff;
+		}
 	}
 }
 
@@ -75,6 +124,7 @@ svg {
 }
 
 #playlist {
+	max-height: 400px;
 	overflow-y: auto;
 }
 

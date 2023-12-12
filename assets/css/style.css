@@ -10795,14 +10795,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root {
+  --bs-link-hover-color: #fff;
+}
+
 .container-my {
   max-width: 1000px;
   margin-inline: auto;
 }
 
-.left-bar {
-  width: 400px;
-  height: 100%;
+.my-text-secondary {
+  color: #6c757d;
 }
 
 .my-m {
@@ -10838,8 +10841,39 @@ svg {
   cursor: pointer;
 }
 
-.hover:hover {
-  color: white;
+.home-container .home-text h5, .home-container .home-text .h5,
+.home-container .home-icon path {
+  transition: color 0.3s ease, fill 0.3s ease;
+}
+.home-container:hover .home-text h5, .home-container:hover .home-text .h5 {
+  color: #ffffff;
+}
+.home-container:hover .home-icon path {
+  fill: #ffffff;
+}
+
+.search-container .search-icon path,
+.search-container .search-text h5,
+.search-container .search-text .h5 {
+  transition: fill 0.3s ease, color 0.3s ease;
+}
+.search-container:hover .search-icon path {
+  fill: #fff;
+}
+.search-container:hover .search-text h5, .search-container:hover .search-text .h5 {
+  color: #fff;
+}
+
+.container-hover .Library-icon path,
+.container-hover .Library-text h5,
+.container-hover .Library-text .h5 {
+  transition: fill 0.3s ease, color 0.3s ease;
+}
+.container-hover:hover .Library-icon path {
+  fill: #fff;
+}
+.container-hover:hover .Library-text h5, .container-hover:hover .Library-text .h5 {
+  color: #fff;
 }
 
 .p-playlist {
@@ -10847,6 +10881,7 @@ svg {
 }
 
 #playlist {
+  max-height: 400px;
   overflow-y: auto;
 }
 

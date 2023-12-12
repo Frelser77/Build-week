@@ -29,8 +29,10 @@ console.log(playlistNames);
 const randPL = document.getElementById("playlist");
 
 playlistNames.forEach((name) => {
+	const div = document.createElement("div");
 	const p = document.createElement("p");
-	p.className = "p-playlist";
+	p.className = "p-playlist my-text-secondary fs-8";
 	p.textContent = name;
-	randPL.appendChild(p);
+	div.appendChild(p);
+	randPL.appendChild(div);
 });

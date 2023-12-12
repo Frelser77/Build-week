@@ -4,25 +4,25 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Simulation of a Soostify page for exame of API" />
-		<link rel="stylesheet" href="./assets/dist/css/style.min.css" />
 		<link rel="stylesheet" href="./assets/css/circular-font.css" />
+		<link rel="stylesheet" href="./assets/dist/css/style.min.css" />
 		<title>Spotifake</title>
 	</head>
 	<body class="bg-black">
 		<div class="container-fluid">
 			<div class="row justify-content-between">
-				<div class="col-4 bg-black left-bar gx-5 px-2 d-flex flex-column justify-content-center">
+				<div class="col-3 bg-black left-bar gx-5 px-2 d-flex flex-column justify-content-center">
 					<div class="sticky-container sticky-top bg-black">
 						<div class="HS-container my-bg-color rounded p-2 mt-1 mb-2">
 							<div class="my-m">
-								<div class="home-container mt-2">
-									<div class="home-inner d-flex align-items-center justify-content-start my-2 hover pointer">
+								<div class="home-container mt-2 pointer">
+									<div class="home-inner d-flex align-items-center justify-content-start my-2pointer">
 										<div class="home-icon me-3">
 											<svg
 												data-encore-id="icon"
 												role="img"
 												aria-hidden="true"
-												class="home-icon text-secondary"
+												class="home-icon my-text-secondary"
 												viewBox="0 0 24 24"
 												height="32px"
 												width="22px"
@@ -33,7 +33,7 @@
 												></path>
 											</svg>
 										</div>
-										<div class="home-text"><h5 class="text-secondary fs-7 fw-bold my-2">Home</h5></div>
+										<div class="home-text"><h5 class="my-text-secondary fs-7 fw-bold my-2">Home</h5></div>
 									</div>
 								</div>
 								<div class="search-container">
@@ -43,7 +43,7 @@
 												data-encore-id="icon"
 												role="img"
 												aria-hidden="true"
-												class="search-icon text-secondary"
+												class="search-icon my-text-secondary"
 												viewBox="0 0 24 24"
 												height="32px"
 												width="22px"
@@ -54,7 +54,7 @@
 												></path>
 											</svg>
 										</div>
-										<div class="search-text text-light"><h5 class="text-secondary m-0 fs-7 fw-bold">Search</h5></div>
+										<div class="search-text text-light"><h5 class="my-text-secondary m-0 fs-7 fw-bold">Search</h5></div>
 									</div>
 								</div>
 							</div>
@@ -64,14 +64,14 @@
 							<div class="my-m">
 								<div class="Library-container my-2">
 									<div class="Library-inner d-flex align-items-center justify-content-start flex-wrap mb-3">
-										<div class="container-hover hover d-flex me-auto align-items-center pointer">
+										<div class="container-hover d-flex me-auto align-items-center pointer">
 											<div class="Library-icon me-3">
 												<svg
 													data-encore-id="icon"
 													role="img"
 													aria-hidden="true"
 													viewBox="0 0 24 24"
-													class="text-secondary"
+													class="my-text-secondary"
 													height="32px"
 													width="22px"
 												>
@@ -81,7 +81,9 @@
 													></path>
 												</svg>
 											</div>
-											<div class="Library-text text-secondary fw-bold me-auto">Your Library</div>
+											<div class="Library-text my-text-secondary fw-bold me-auto">
+												<h5 class="my-text-secondary m-0 fs-7 fw-bold">Your Library</h5>
+											</div>
 										</div>
 										<div class="add-container d-flex">
 											<div class="add-icon">
@@ -91,7 +93,7 @@
 													role="img"
 													aria-hidden="true"
 													viewBox="0 0 16 16"
-													class="text-secondary me-4"
+													class="my-text-secondary me-4"
 													height="24px"
 													width="14px"
 												>
@@ -108,7 +110,7 @@
 													role="img"
 													aria-hidden="true"
 													viewBox="0 0 16 16"
-													class="Svg-sc-ytk21e-0 kgVuXA text-secondary"
+													class="Svg-sc-ytk21e-0 kgVuXA my-text-secondary"
 													height="24px"
 													width="14px"
 												>
@@ -152,43 +154,45 @@
 							</div>
 						</div>
 					</div>
-					<div class="my-m mt-2">
-						<div class="row">
-							<div class="col">
-								<div id="playlist" class="inner-rand-playlist bg-black">
-									<div class="search-playlist-container d-flex align-items-center justify-content-between">
-										<div class="seacrh-icon-play">
-											<svg
-												data-encore-id="icon"
-												role="img"
-												aria-hidden="true"
-												class="search-icon text-secondary"
-												viewBox="0 0 24 24"
-												height="26px"
-												width="16px"
-											>
-												<path
-													d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
-													fill="currentColor"
-												></path>
-											</svg>
-										</div>
-										<div class="div recents d-flex pointer me-2">
-											<a class="text-decoration-none text-secondary me-2" href="#">Recents</a>
-											<svg
-												data-encore-id="icon"
-												role="img"
-												aria-hidden="true"
-												viewBox="0 0 16 16"
-												class="text-secondary"
-												height="26px"
-												width="16px"
-											>
-												<path
-													d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
-													fill="currentColor"
-												></path>
-											</svg>
+					<div class="Playlist-container my-bg-color rounded-bottom">
+						<div class="my-m mt-2">
+							<div class="row">
+								<div class="col">
+									<div id="playlist" class="inner-rand-playlist">
+										<div class="search-playlist-container d-flex align-items-center justify-content-between">
+											<div class="seacrh-icon-play">
+												<svg
+													data-encore-id="icon"
+													role="img"
+													aria-hidden="true"
+													class="search-icon my-text-secondary"
+													viewBox="0 0 24 24"
+													height="26px"
+													width="16px"
+												>
+													<path
+														d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+														fill="currentColor"
+													></path>
+												</svg>
+											</div>
+											<div class="div recents d-flex pointer me-2">
+												<a id="a" class="text-decoration-none my-text-secondary me-2" href="#">Recents</a>
+												<svg
+													data-encore-id="icon"
+													role="img"
+													aria-hidden="true"
+													viewBox="0 0 16 16"
+													class="my-text-secondary"
+													height="26px"
+													width="16px"
+												>
+													<path
+														d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+														fill="currentColor"
+													></path>
+												</svg>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -199,7 +203,7 @@
 
 				<!-- div container left-bar -->
 
-				<div id="content" class="col-6 flex-grow-1">
+				<div id="content" class="col-7 flex-grow-1">
 					<div class="content-container d-flex bg-black"></div>
 					<!-- Contenuto principale qui (album, artista, ecc.) -->
 				</div>
@@ -211,23 +215,40 @@
 			</div>
 
 			<div class="row footer bg-black text-white fixed-bottom d-flex align-content-center">
-				<div class="col current-track-info">
-					<span class="track-title">Titolo della Canzone</span>
-					<span class="artist-name">Nome dell'Artista</span>
+				<div class="col current-track-info d-flex">
+					<div class="artist me-auto">
+						<span class="track-title">Titolo della Canzone</span>
+						<span class="artist-name">Nome dell'Artista</span>
+					</div>
 					<span aria-hidden="true"
 						><svg
 							data-encore-id="icon"
-							height="32px"
-							width="22px"
+							height="26px"
+							width="16px"
 							role="img"
 							aria-hidden="true"
 							viewBox="0 0 16 16"
-							class="text-secondary"
+							class="my-text-secondary hover"
 						>
 							<path
 								d="M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z"
 								fill="currentColor"
 							></path>
+						</svg>
+						<svg
+							data-encore-id="icon"
+							role="img"
+							aria-hidden="true"
+							viewBox="0 0 16 16"
+							class="my-text-secondary hover"
+							height="26px"
+							width="16px"
+						>
+							<path
+								d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+								fill="currentColor"
+							></path>
+							<path d="M12 8.75H4v-1.5h8v1.5z" fill="currentColor"></path>
 						</svg>
 					</span>
 				</div>
