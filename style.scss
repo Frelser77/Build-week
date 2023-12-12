@@ -1,6 +1,31 @@
 @import "bootstrap-overrides.scss";
+
 :root {
 	--bs-link-hover-color: #fff;
+	--bs-btn-border-color: transparent;
+	--bs-btn-hover-bg: transparent;
+	--bs-btn-hover-border-color: transparent;
+	--bs-btn-active-bg: transparent;
+	--bs-btn-active-border-color: transparent;
+}
+
+.btn-check:checked + .btn,
+.btn-check:active + .btn,
+.btn:active,
+.btn:hover {
+	border-color: var(--bs-btn-border-color, transparent);
+	background-color: var(--bs-btn-hover-bg, transparent);
+}
+
+.btn:not(:disabled):not(.disabled):active,
+.btn:not(:disabled):not(.disabled).active,
+.show > .btn.dropdown-toggle {
+	border-color: var(--bs-btn-active-border-color, transparent);
+	background-color: var(--bs-btn-active-bg, transparent);
+}
+
+.btn:focus {
+	box-shadow: none;
 }
 
 // Variabili per i colori
@@ -49,7 +74,7 @@ $btn-font-size: 0.9rem;
 	background-color: $secondary-color;
 }
 
-button {
+.btn-container button {
 	&:hover {
 		background-color: $hover-bg-color !important;
 	}
@@ -156,15 +181,14 @@ svg {
 	background-color: $footer-background-color;
 	color: white;
 	z-index: 1030;
-	padding: 0 1rem; // Padding orizzontale per i contenuti del footer
-
+	padding: 0 1rem;
 	// Controlli di riproduzione
 	.playback-controls {
 		.btn {
-			margin: 0 0.25rem; // Spaziatura tra i bottoni
+			margin: 0 0.25rem;
 			color: white;
 			&:hover {
-				color: #1db954; // Colore di evidenziazione quando il mouse passa sopra
+				color: #1db954;
 			}
 		}
 	}

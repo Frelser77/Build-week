@@ -10797,6 +10797,30 @@ textarea.form-control-lg {
 }
 :root {
   --bs-link-hover-color: #fff;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: transparent;
+}
+
+.btn-check:checked + .btn,
+.btn-check:active + .btn,
+.btn:active,
+.btn:hover {
+  border-color: var(--bs-btn-border-color, transparent);
+  background-color: var(--bs-btn-hover-bg, transparent);
+}
+
+.btn:not(:disabled):not(.disabled):active,
+.btn:not(:disabled):not(.disabled).active,
+.show > .btn.dropdown-toggle {
+  border-color: var(--bs-btn-active-border-color, transparent);
+  background-color: var(--bs-btn-active-bg, transparent);
+}
+
+.btn:focus {
+  box-shadow: none;
 }
 
 .container-my {
@@ -10820,7 +10844,7 @@ textarea.form-control-lg {
   background-color: #2a2a2a;
 }
 
-button:hover {
+.btn-container button:hover {
   background-color: rgba(141, 141, 141, 0.328) !important;
 }
 
