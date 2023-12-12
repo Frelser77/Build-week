@@ -10822,4 +10822,71 @@ button:hover {
 
 svg {
   cursor: pointer;
+}
+
+.btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.btn-container {
+  gap: 8px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hover:hover {
+  color: white;
+}
+
+.p-playlist {
+  color: white;
+}
+
+#playlist {
+  max-height: calc(100vh - 320px);
+  overflow-y: auto;
+}
+
+/* Modifica l'aspetto dell'intera scrollbar */
+#playlist::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Modifica l'aspetto del tracciato della scrollbar */
+#playlist::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Modifica l'aspetto della maniglia di scorrimento della scrollbar */
+#playlist::-webkit-scrollbar-thumb {
+  background: rgba(137, 137, 137, 0.2509803922);
+}
+#playlist::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background-color: #333;
+  color: white;
+  z-index: 1030;
+  padding: 0 1rem;
+}
+.footer .playback-controls .btn {
+  margin: 0 0.25rem;
+  color: white;
+}
+.footer .playback-controls .btn:hover {
+  color: #1db954;
+}
+
+body {
+  padding-bottom: 80px;
 }/*# sourceMappingURL=style.css.map */
