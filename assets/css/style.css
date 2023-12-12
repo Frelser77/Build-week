@@ -10850,6 +10850,10 @@ svg {
   overflow-y: auto;
 }
 
+#side-right {
+  max-height: 650px;
+}
+
 /* Modifica l'aspetto dell'intera scrollbar */
 #playlist::-webkit-scrollbar {
   width: 10px;
