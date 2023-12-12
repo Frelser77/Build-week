@@ -18,108 +18,108 @@ $scrollbar-width: 10px;
 $margin-left-custom: 15px;
 $btn-padding: 0.3rem 0.6rem;
 $btn-font-size: 0.9rem;
-$playlist-max-height: calc(100vh - 320px);
+//$playlist-max-height: calc(100vh - 320px);
 
 .container-my {
-	max-width: $max-container-width;
-	margin-inline: auto;
+  max-width: $max-container-width;
+  margin-inline: auto;
 }
 
 .left-bar {
-	width: $left-bar-width;
-	height: 100%;
+  //width: $left-bar-width;
+  height: 100%;
 }
 
 .my-m {
-	margin-left: $margin-left-custom;
+  margin-left: $margin-left-custom;
 }
 
 .my-bg-color {
-	background-color: $primary-color;
+  background-color: $primary-color;
 }
 
 .my-btn-bg {
-	background-color: $secondary-color;
+  background-color: $secondary-color;
 }
 
 button {
-	&:hover {
-		background-color: $hover-bg-color !important;
-	}
+  &:hover {
+    background-color: $hover-bg-color !important;
+  }
 }
 svg {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .btn {
-	padding: $btn-padding;
-	font-size: $btn-font-size;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
 }
 
 .btn-container {
-	gap: $gap-btn-container;
+  gap: $gap-btn-container;
 }
 
 .pointer {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .hover {
-	&:hover {
-		color: $text-color;
-	}
+  &:hover {
+    color: $text-color;
+  }
 }
 
 .p-playlist {
-	color: $text-color;
+  color: $text-color;
 }
 
 #playlist {
-	overflow-y: auto;
+  overflow-y: auto;
 }
 
 /* Modifica l'aspetto dell'intera scrollbar */
 #playlist::-webkit-scrollbar {
-	width: $scrollbar-width;
+  width: $scrollbar-width;
 }
 
 /* Modifica l'aspetto del tracciato della scrollbar */
 #playlist::-webkit-scrollbar-track {
-	background: transparent;
+  background: transparent;
 }
 
 /* Modifica l'aspetto della maniglia di scorrimento della scrollbar */
 #playlist::-webkit-scrollbar-thumb {
-	background: $scrollbar-color;
-	&:hover {
-		background: $scrollbar-hover-color;
-	}
+  background: $scrollbar-color;
+  &:hover {
+    background: $scrollbar-hover-color;
+  }
 }
 
 // Stili per il footer
 .footer {
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: $footer-height;
-	background-color: $footer-background-color;
-	color: white;
-	z-index: 1030;
-	padding: 0 1rem; // Padding orizzontale per i contenuti del footer
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: $footer-height;
+  background-color: $footer-background-color;
+  color: white;
+  z-index: 1030;
+  padding: 0 1rem; // Padding orizzontale per i contenuti del footer
 
-	// Controlli di riproduzione
-	.playback-controls {
-		.btn {
-			margin: 0 0.25rem; // Spaziatura tra i bottoni
-			color: white;
-			&:hover {
-				color: #1db954; // Colore di evidenziazione quando il mouse passa sopra
-			}
-		}
-	}
+  // Controlli di riproduzione
+  .playback-controls {
+    .btn {
+      margin: 0 0.25rem; // Spaziatura tra i bottoni
+      color: white;
+      &:hover {
+        color: #1db954; // Colore di evidenziazione quando il mouse passa sopra
+      }
+    }
+  }
 }
 
 body {
-	padding-bottom: $footer-height;
+  padding-bottom: $footer-height;
 }

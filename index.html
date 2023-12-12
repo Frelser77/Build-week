@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Simulation of a Soostify page for exame of API" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <title>Spotifake</title>
@@ -11,7 +12,7 @@
   <body class="bg-black">
     <div class="container-fluid">
       <div class="row justify-content-between">
-        <div class="col-4 bg-black left-bar gx-5 px-2 d-flex flex-column justify-content-center">
+        <div class="col-3 bg-black left-bar gx-5 px-2 d-flex flex-column justify-content-center">
           <div class="sticky-container sticky-top bg-black">
             <div class="HS-container my-bg-color rounded p-2 mt-1 mb-2">
               <div class="my-m">
@@ -199,7 +200,7 @@
 
         <!-- div container left-bar -->
 
-        <div id="content" class="col-6 flex-grow-1">
+        <div id="content" class="col-7 flex-grow-1">
           <div class="content-container d-flex bg-black"></div>
           <!-- Contenuto principale qui (album, artista, ecc.) -->
         </div>
@@ -207,9 +208,9 @@
         <div class="col-auto sticky-top bg-black vh-100 right-bar d-none d-lg-block">
           <!-- Contenuti della sidebar destra (attività amici, ecc.) -->
           <div class="d-flex gap-2">
-            <h2 class="text-light fs-7">Attività amici</h2>
-            <span class="ms-auto"><i class="bi bi-person-plus text-light"></i></span>
-            <span><i class="bi bi-x-lg text-light"></i></span>
+            <h2 class="text-light fs-5">Attività amici</h2>
+            <span class="ms-auto"><i class="bi bi-person-plus text-light fs-5"></i></span>
+            <span><i class="bi bi-x-lg text-light fs-5"></i></span>
           </div>
           <div class="d-flex align-items-start mt-3 text-light">
             <img
@@ -225,6 +226,37 @@
               <p class="fs-8 m-0">Album I</p>
             </div>
             <p class="fs-8">2 ore</p>
+          </div>
+
+          <div class="d-flex align-items-start mt-3 text-light">
+            <img
+              class="rounded-circle"
+              src="./assets/imgs/main/download.jpeg"
+              alt="profile picture"
+              width="40"
+              height="40"
+            />
+            <div class="d-flex flex-column gap-2 ms-2">
+              <p class="fs-7 fw-bold m-0">Bruno Strati</p>
+              <p class="fs-8 m-0">I Feel Fantastic - Mannequin</p>
+              <p class="fs-8 m-0">Cursed Videos</p>
+            </div>
+            <p class="fs-8 ms-auto">4 ore</p>
+          </div>
+          <div class="d-flex align-items-start mt-3 text-light">
+            <img
+              class="rounded-circle"
+              src="./assets/imgs/main/cool-profile-pictures-retouching-1.webp"
+              alt="profile picture"
+              width="40"
+              height="40"
+            />
+            <div class="d-flex flex-column gap-2 ms-2">
+              <p class="fs-7 fw-bold m-0">Sandra Stecchini</p>
+              <p class="fs-8 m-0">Asereje - Las Ketchup</p>
+              <p class="fs-8 m-0">Annoying Tracks</p>
+            </div>
+            <p class="fs-8 ms-auto">7 ore</p>
           </div>
         </div>
       </div>
