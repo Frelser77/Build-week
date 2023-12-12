@@ -10,8 +10,8 @@
 	</head>
 	<body class="bg-black">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-4 bg-black vh-100 left-bar d-flex flex-column gx-5 px-2">
+			<div class="row justify-content-between">
+				<div class="col-4 bg-black left-bar gx-5 px-2 d-flex flex-column justify-content-center">
 					<div class="sticky-container sticky-top bg-black">
 						<div class="HS-container my-bg-color rounded p-2 mt-1 mb-2">
 							<div class="my-m">
@@ -154,42 +154,43 @@
 					</div>
 					<div class="my-m mt-2">
 						<div class="row">
-							<div class="col"></div>
-						</div>
-						<div id="playlist" class="inner-rand-playlist bg-black">
-							<div class="search-playlist-container d-flex align-items-center justify-content-evenly">
-								<div class="seacrh-icon-play">
-									<svg
-										data-encore-id="icon"
-										role="img"
-										aria-hidden="true"
-										class="search-icon text-secondary"
-										viewBox="0 0 24 24"
-										height="26px"
-										width="16px"
-									>
-										<path
-											d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
-											fill="currentColor"
-										></path>
-									</svg>
-								</div>
-								<div class="div recents d-flex pointer me-2">
-									<a class="text-decoration-none text-secondary me-2" href="#">Recents</a>
-									<svg
-										data-encore-id="icon"
-										role="img"
-										aria-hidden="true"
-										viewBox="0 0 16 16"
-										class="text-secondary"
-										height="26px"
-										width="16px"
-									>
-										<path
-											d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
-											fill="currentColor"
-										></path>
-									</svg>
+							<div class="col">
+								<div id="playlist" class="inner-rand-playlist bg-black">
+									<div class="search-playlist-container d-flex align-items-center justify-content-between">
+										<div class="seacrh-icon-play">
+											<svg
+												data-encore-id="icon"
+												role="img"
+												aria-hidden="true"
+												class="search-icon text-secondary"
+												viewBox="0 0 24 24"
+												height="26px"
+												width="16px"
+											>
+												<path
+													d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+													fill="currentColor"
+												></path>
+											</svg>
+										</div>
+										<div class="div recents d-flex pointer me-2">
+											<a class="text-decoration-none text-secondary me-2" href="#">Recents</a>
+											<svg
+												data-encore-id="icon"
+												role="img"
+												aria-hidden="true"
+												viewBox="0 0 16 16"
+												class="text-secondary"
+												height="26px"
+												width="16px"
+											>
+												<path
+													d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+													fill="currentColor"
+												></path>
+											</svg>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -198,18 +199,18 @@
 
 				<!-- div container left-bar -->
 
-				<div id="content" class="col-6">
+				<div id="content" class="col-6 flex-grow-1">
 					<div class="content-container d-flex bg-black"></div>
 					<!-- Contenuto principale qui (album, artista, ecc.) -->
 				</div>
 
-				<div class="col-2 bg-black vh-100 d-none d-lg-block">
+				<div class="col-2 bg-black d-none d-lg-block">
 					<!-- Contenuti della sidebar destra (attività amici, ecc.) -->
 					<h2 class="text-light sticky-top">Side bar destra</h2>
 				</div>
 			</div>
 
-			<div class="row footer bg-black text-white fixed-bottom d-flex">
+			<div class="row footer bg-black text-white fixed-bottom d-flex align-content-center">
 				<div class="col current-track-info">
 					<span class="track-title">Titolo della Canzone</span>
 					<span class="artist-name">Nome dell'Artista</span>

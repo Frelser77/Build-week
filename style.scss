@@ -27,6 +27,7 @@ $playlist-max-height: calc(100vh - 320px);
 
 .left-bar {
 	width: $left-bar-width;
+	height: 100%;
 }
 
 .my-m {
@@ -74,7 +75,6 @@ svg {
 }
 
 #playlist {
-	max-height: $playlist-max-height;
 	overflow-y: auto;
 }
 
