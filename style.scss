@@ -40,7 +40,6 @@ $text-color: white;
 // Variabili per le dimensioni
 $footer-height: 80px;
 $max-container-width: 1000px;
-// $left-bar-width: 400px;
 $gap-btn-container: 8px;
 $scrollbar-width: 10px;
 $margin-left-custom: 15px;
@@ -57,10 +56,14 @@ $btn-font-size: 0.9rem;
 	color: #6c757d;
 }
 
-// .left-bar {
-// 	// width: $left-bar-width;
-// 	height: 100vh;
-// }
+.left-bar {
+	max-width: 90vh;
+	overflow-y: auto;
+}
+
+#side-right {
+	max-height: 630px;
+}
 
 .my-m {
 	margin-left: $margin-left-custom;
@@ -149,13 +152,13 @@ svg {
 }
 
 #playlist {
-	max-height: 400px;
+	max-height: 70vh;
 	overflow-y: auto;
 }
 
-#side-right {
-	max-height: 630px;
-}
+// #content {
+// 	overflow-y: auto;
+// }
 
 /* Modifica l'aspetto dell'intera scrollbar */
 #playlist::-webkit-scrollbar {
