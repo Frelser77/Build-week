@@ -1,31 +1,31 @@
 @import "bootstrap-overrides.scss";
 
 :root {
-	--bs-link-hover-color: #fff;
-	--bs-btn-border-color: transparent;
-	--bs-btn-hover-bg: transparent;
-	--bs-btn-hover-border-color: transparent;
-	--bs-btn-active-bg: transparent;
-	--bs-btn-active-border-color: transparent;
+  --bs-link-hover-color: #fff;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: transparent;
 }
 
 .btn-check:checked + .btn,
 .btn-check:active + .btn,
 .btn:active,
 .btn:hover {
-	border-color: var(--bs-btn-border-color, transparent);
-	background-color: var(--bs-btn-hover-bg, transparent);
+  border-color: var(--bs-btn-border-color, transparent);
+  background-color: var(--bs-btn-hover-bg, transparent);
 }
 
 .btn:not(:disabled):not(.disabled):active,
 .btn:not(:disabled):not(.disabled).active,
 .show > .btn.dropdown-toggle {
-	border-color: var(--bs-btn-active-border-color, transparent);
-	background-color: var(--bs-btn-active-bg, transparent);
+  border-color: var(--bs-btn-active-border-color, transparent);
+  background-color: var(--bs-btn-active-bg, transparent);
 }
 
 .btn:focus {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 // Variabili per i colori
@@ -50,107 +50,107 @@ $btn-font-size: 0.9rem;
 // $playlist-max-height: calc(100vh - 320px);
 
 .container-my {
-	max-width: $max-container-width;
-	margin-inline: auto;
+  max-width: $max-container-width;
+  margin-inline: auto;
 }
 
 .my-text-secondary {
-	color: #6c757d;
+  color: #6c757d;
 }
 
 .left-bar {
-	max-width: 90vh;
-	overflow-y: auto;
+  max-width: 90vh;
+  overflow-y: auto;
 }
 
 #side-right {
-	max-height: 630px;
+  max-height: 630px;
 }
 
 .my-m {
-	margin-left: $margin-left-custom;
+  margin-left: $margin-left-custom;
 }
 
 .my-bg-color {
-	background-color: $primary-color;
+  background-color: $primary-color;
 }
 
 .my-btn-bg {
-	background-color: $secondary-color;
+  background-color: $secondary-color;
 }
 
 .btn-container button {
-	&:hover {
-		background-color: $hover-bg-color !important;
-	}
+  &:hover {
+    background-color: $hover-bg-color !important;
+  }
 }
 svg {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .btn {
-	padding: $btn-padding;
-	font-size: $btn-font-size;
+  padding: $btn-padding;
+  font-size: $btn-font-size;
 }
 
 .btn-container {
-	gap: $gap-btn-container;
+  gap: $gap-btn-container;
 }
 
 .pointer {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .home-container {
-	.home-text h5,
-	.home-icon path {
-		transition: color 0.3s ease, fill 0.3s ease;
-	}
+  .home-text h5,
+  .home-icon path {
+    transition: color 0.3s ease, fill 0.3s ease;
+  }
 
-	&:hover {
-		.home-text h5 {
-			color: #ffffff;
-		}
-		.home-icon path {
-			fill: #ffffff;
-		}
-	}
+  &:hover {
+    .home-text h5 {
+      color: #ffffff;
+    }
+    .home-icon path {
+      fill: #ffffff;
+    }
+  }
 }
 
 .search-container {
-	.search-icon path,
-	.search-text h5 {
-		transition: fill 0.3s ease, color 0.3s ease;
-	}
+  .search-icon path,
+  .search-text h5 {
+    transition: fill 0.3s ease, color 0.3s ease;
+  }
 
-	&:hover {
-		.search-icon path {
-			fill: #fff;
-		}
-		.search-text h5 {
-			color: #fff;
-		}
-	}
+  &:hover {
+    .search-icon path {
+      fill: #fff;
+    }
+    .search-text h5 {
+      color: #fff;
+    }
+  }
 }
 
 .container-hover {
-	.Library-icon path,
-	.Library-text h5 {
-		transition: fill 0.3s ease, color 0.3s ease;
-	}
+  .Library-icon path,
+  .Library-text h5 {
+    transition: fill 0.3s ease, color 0.3s ease;
+  }
 
-	&:hover {
-		.Library-icon path {
-			fill: #fff;
-		}
-		.Library-text h5 {
-			color: #fff;
-		}
-	}
+  &:hover {
+    .Library-icon path {
+      fill: #fff;
+    }
+    .Library-text h5 {
+      color: #fff;
+    }
+  }
 }
 
 .p-playlist {
-	color: $text-color;
+  color: $text-color;
 }
 
 // #playlist {
@@ -159,26 +159,29 @@ svg {
 // }
 
 #content {
-	max-height: 88vh;
-	overflow-y: auto;
+  max-height: 88vh;
+  overflow-y: auto;
 }
 
 /* Modifica l'aspetto dell'intera scrollbar */
-#playlist::-webkit-scrollbar {
-	width: $scrollbar-width;
+#playlist::-webkit-scrollbar,
+#content::-webkit-scrollbar {
+  width: $scrollbar-width;
 }
 
 /* Modifica l'aspetto del tracciato della scrollbar */
-#playlist::-webkit-scrollbar-track {
-	background: transparent;
+#playlist::-webkit-scrollbar-track,
+#content::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Modifica l'aspetto della maniglia di scorrimento della scrollbar */
-#playlist::-webkit-scrollbar-thumb {
-	background: $scrollbar-color;
-	&:hover {
-		background: $scrollbar-hover-color;
-	}
+#playlist::-webkit-scrollbar-thumb,
+#content::-webkit-scrollbar-thumb {
+  background: $scrollbar-color;
+  &:hover {
+    background: $scrollbar-hover-color;
+  }
 }
 
 // Stili per il footer
@@ -206,17 +209,17 @@ svg {
 
 // Footer (Barra inferiore)
 .fixed-bottom {
-	height: $footer-height;
-	background-color: $footer-background-color;
-	color: white;
-	padding: 0 1rem;
-	z-index: 1080;
+  height: $footer-height;
+  background-color: $footer-background-color;
+  color: white;
+  padding: 0 1rem;
+  z-index: 1080;
 }
 
 // Altezza della sezione scrollabile della sidebar
 .scrollable-section-side {
-	max-height: calc(98vh - #{$top-height} - #{$footer-height});
-	overflow-y: auto;
+  max-height: calc(98vh - #{$top-height} - #{$footer-height});
+  overflow-y: auto;
 }
 
 // .scrollable-section-side {
@@ -228,10 +231,10 @@ svg {
 // }
 
 body {
-	padding-bottom: $footer-height;
+  padding-bottom: $footer-height;
 }
 
 .sticky-container {
-	position: sticky;
-	top: 5px;
+  position: sticky;
+  top: 5px;
 }
