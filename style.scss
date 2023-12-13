@@ -153,14 +153,15 @@ svg {
 	color: $text-color;
 }
 
-#playlist {
-	max-height: 70vh;
-	overflow-y: auto;
-}
-
-// #content {
+// #playlist {
+// 	max-height: 70vh;
 // 	overflow-y: auto;
 // }
+
+#content {
+	max-height: 88vh;
+	overflow-y: auto;
+}
 
 /* Modifica l'aspetto dell'intera scrollbar */
 #playlist::-webkit-scrollbar {
@@ -213,18 +214,18 @@ svg {
 }
 
 // Altezza della sezione scrollabile della sidebar
-// .scrollable-section-side {
-// 	max-height: calc(100vh - #{$top-height} - #{$footer-height});
-// 	overflow-y: auto;
-// }
-
 .scrollable-section-side {
-	// position: fixed;
-	// top: #{$top-height};
-	// bottom: calc(#{$footer-height} + #{$more-space});
+	max-height: calc(98vh - #{$top-height} - #{$footer-height});
 	overflow-y: auto;
-	// left: 12px;
 }
+
+// .scrollable-section-side {
+// 	position: fixed;
+// 	top: #{$top-height};
+// 	bottom: calc(#{$footer-height} + #{$more-space});
+// 	overflow-y: auto;
+// 	left: 12px;
+// }
 
 body {
 	padding-bottom: $footer-height;

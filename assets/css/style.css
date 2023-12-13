@@ -10913,8 +10913,8 @@ svg {
   color: white;
 }
 
-#playlist {
-  max-height: 70vh;
+#content {
+  max-height: 88vh;
   overflow-y: auto;
 }
 
@@ -10945,6 +10945,7 @@ svg {
 }
 
 .scrollable-section-side {
+  max-height: calc(98vh - 228.39px - 76px);
   overflow-y: auto;
 }
 
