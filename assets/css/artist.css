@@ -10906,4 +10906,32 @@ svg {
 
 body {
   padding-bottom: 80px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.artistbg {
+  background-image: url(./assets/imgs/main/yellowcard_2023_1280x1280_1676342674.jpg);
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+}
+
+.artistbg2 {
+  background-color: #121212;
+  width: 100%;
+  height: 49vh;
+}
+
+.artistbg2row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.followbutton {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}/*# sourceMappingURL=artist.css.map */
