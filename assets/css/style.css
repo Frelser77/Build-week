@@ -10926,25 +10926,6 @@ svg {
   background: #555;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 76px;
-  background-color: #333;
-  color: white;
-  z-index: 1030;
-  padding: 0 1rem;
-}
-.footer .playback-controls .btn {
-  margin: 0 0.25rem;
-  color: white;
-}
-.footer .playback-controls .btn:hover {
-  color: #1db954;
-}
-
 .fixed-bottom {
   height: 76px;
   background-color: #333;
@@ -10954,16 +10935,7 @@ svg {
 }
 
 .scrollable-section-side {
-  max-height: calc(100vh - 228.39px - 76px);
   overflow-y: auto;
-}
-
-.scrollable-section-side {
-  position: fixed;
-  top: 228.39px;
-  bottom: calc(76px + 5px);
-  overflow-y: auto;
-  left: 12px;
 }
 
 body {
