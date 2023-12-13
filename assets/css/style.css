@@ -10832,6 +10832,15 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
+.left-bar {
+  max-width: 90vh;
+  overflow-y: auto;
+}
+
+#side-right {
+  max-height: 630px;
+}
+
 .my-m {
   margin-left: 15px;
 }
@@ -10904,7 +10913,8 @@ svg {
   color: white;
 }
 
-#content {
+#playlist {
+  max-height: 70vh;
   overflow-y: auto;
 }
 

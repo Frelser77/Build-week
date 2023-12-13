@@ -58,9 +58,14 @@ $btn-font-size: 0.9rem;
 	color: #6c757d;
 }
 
-// #side-right {
-// 	max-height: 630px;
-// }
+.left-bar {
+	max-width: 90vh;
+	overflow-y: auto;
+}
+
+#side-right {
+	max-height: 630px;
+}
 
 .my-m {
 	margin-left: $margin-left-custom;
@@ -148,14 +153,14 @@ svg {
 	color: $text-color;
 }
 
-// #playlist {
-// 	max-height: 510px;
-// 	overflow-y: auto;
-// }
-
-#content {
+#playlist {
+	max-height: 70vh;
 	overflow-y: auto;
 }
+
+// #content {
+// 	overflow-y: auto;
+// }
 
 /* Modifica l'aspetto dell'intera scrollbar */
 #playlist::-webkit-scrollbar {
