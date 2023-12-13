@@ -15,7 +15,7 @@ function getRandomElement(arr) {
 let playlistNames = [];
 
 // Generating 100 random playlist names
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 50; i++) {
 	const genre = getRandomElement(genres);
 	const phrase = getRandomElement(phrases);
 	const number = Math.floor(Math.random() * 100) + 1;

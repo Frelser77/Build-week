@@ -38,9 +38,10 @@ $scrollbar-hover-color: #555;
 $text-color: white;
 
 // Variabili per le dimensioni
-$footer-height: 80px;
+$top-height: 228.39px;
+$footer-height: 76px;
+$more-space: 5px;
 $max-container-width: 1000px;
-// $left-bar-width: 400px;
 $gap-btn-container: 8px;
 $scrollbar-width: 10px;
 $margin-left-custom: 15px;
@@ -57,9 +58,8 @@ $btn-font-size: 0.9rem;
 	color: #6c757d;
 }
 
-// .left-bar {
-// 	// width: $left-bar-width;
-// 	height: 100vh;
+// #side-right {
+// 	max-height: 630px;
 // }
 
 .my-m {
@@ -148,8 +148,12 @@ svg {
 	color: $text-color;
 }
 
-#playlist {
-	max-height: 400px;
+// #playlist {
+// 	max-height: 510px;
+// 	overflow-y: auto;
+// }
+
+#content {
 	overflow-y: auto;
 }
 
@@ -194,6 +198,34 @@ svg {
 	}
 }
 
+// Footer (Barra inferiore)
+.fixed-bottom {
+	height: $footer-height;
+	background-color: $footer-background-color;
+	color: white;
+	padding: 0 1rem;
+	z-index: 1080;
+}
+
+// Altezza della sezione scrollabile della sidebar
+.scrollable-section-side {
+	max-height: calc(100vh - #{$top-height} - #{$footer-height});
+	overflow-y: auto;
+}
+
+.scrollable-section-side {
+	position: fixed;
+	top: #{$top-height};
+	bottom: calc(#{$footer-height} + #{$more-space});
+	overflow-y: auto;
+	left: 12px;
+}
+
 body {
 	padding-bottom: $footer-height;
+}
+
+.sticky-container {
+	position: sticky;
+	top: 5px;
 }
