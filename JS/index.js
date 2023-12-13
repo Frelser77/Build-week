@@ -15,7 +15,7 @@ function getRandomElement(arr) {
 let playlistNames = [];
 
 // Generating 100 random playlist names
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 50; i++) {
 	const genre = getRandomElement(genres);
 	const phrase = getRandomElement(phrases);
 	const number = Math.floor(Math.random() * 100) + 1;
@@ -29,8 +29,10 @@ console.log(playlistNames);
 const randPL = document.getElementById("playlist");
 
 playlistNames.forEach((name) => {
+	const div = document.createElement("div");
 	const p = document.createElement("p");
-	p.className = "p-playlist";
+	p.className = "p-playlist my-text-secondary fs-8";
 	p.textContent = name;
-	randPL.appendChild(p);
+	div.appendChild(p);
+	randPL.appendChild(div);
 });
