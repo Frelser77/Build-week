@@ -209,13 +209,80 @@ svg {
 
 // Footer (Barra inferiore)
 .fixed-bottom {
-  height: $footer-height;
+  //height: $footer-height;
   background-color: $footer-background-color;
   color: white;
   padding: 0 1rem;
   z-index: 1080;
 }
+#progressBar {
+  width: 400px;
+  height: 5px;
+}
+#insideBar {
+  height: 5px;
+  width: 0;
+}
 
+.svg-container {
+  width: 25px;
+  height: 25px;
+  margin-inline: 5px;
+}
+
+$bg-color: hsla(0, 0%, 100%, 0.3);
+$fg-color: #fff;
+$active-fg-color: #1db954;
+$progress-bar-height: 4px;
+
+// Applica gli stili all'input range
+input[type="range"] {
+  --progress-bar-height: #{$progress-bar-height};
+  --bg-color: #{$bg-color};
+  --fg-color: #{$fg-color};
+  --is-active-fg-color: #{$active-fg-color};
+  height: var(--progress-bar-height);
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
+  width: 100%;
+  background-color: var(--bg-color);
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 15%;
+
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background: var(--is-active-fg-color);
+  }
+
+  // Stile per la traccia dello slider
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: var(--progress-bar-height);
+    cursor: pointer;
+    background-color: var(--bg-color);
+    border-radius: var(--progress-bar-radius);
+  }
+
+  // Stile per il pollice dello slider
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: var(--fg-color);
+    cursor: pointer;
+    margin-top: calc(var(--progress-bar-height) / 4);
+    &:hover {
+      background: var(--is-active-fg-color);
+    }
+  }
+}
 // Altezza della sezione scrollabile della sidebar
 .scrollable-section-side {
   max-height: calc(98vh - #{$top-height} - #{$footer-height});
