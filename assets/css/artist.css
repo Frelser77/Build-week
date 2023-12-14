@@ -10942,7 +10942,7 @@ thead th {
 }
 
 .numbertd {
-  width: 7%;
+  width: 10px;
   text-align: center;
 }
 
@@ -10957,8 +10957,8 @@ thead th {
 }
 
 .canzonetd {
-  width: 25%;
-  text-align: left;
+  width: 50%;
+  text-align: center;
 }
 
 .ascoltatoritd {
@@ -10967,7 +10967,8 @@ thead th {
 }
 
 .duratatd {
-  text-align: left;
+  width: 90%;
+  text-align: center;
 }
 
 tr td {
@@ -10976,4 +10977,9 @@ tr td {
 
 table {
   height: 60%;
+}
+
+table tfoot tr td {
+  padding-left: 10px;
+  width: 10%;
 }/*# sourceMappingURL=artist.css.map */
