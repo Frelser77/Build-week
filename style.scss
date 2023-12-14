@@ -183,7 +183,9 @@ svg {
     background: $scrollbar-hover-color;
   }
 }
-
+#profileLink::before {
+  display: none;
+}
 // Stili per il footer
 // .footer {
 // 	position: fixed;

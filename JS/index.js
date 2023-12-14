@@ -35,13 +35,11 @@ playlistNames.forEach((name) => {
 });
 
 // SCROLL BRA FUNCTION
-const navScroll = window.addEventListener("scroll", function () {
+const content = document.getElementById("content");
+content.addEventListener("scroll", function () {
   let nav = document.getElementById("nav");
-  if (navScroll.scrollY > 10) {
-    // Ad esempio, dopo 100px di scroll
-    nav.style.backgroundColor = "blue"; // Cambia in blu
-  } else {
-    nav.style.backgroundColor = "white"; // Torna a bianco
+  if (content.scrollY > 10) {
+    nav.classList.add("bg-black");
   }
 });
 
@@ -68,22 +66,62 @@ async function getGenreDetails(genreId) {
   }
 }
 
-// Funzione per creare l'HTML di una card di un album
+// CARD GRANDI
 function createAlbumCard(album, artistName) {
-  return `
-        <div class="col g-0 m-0 card-group pointer">
-            <div class="card bg-dark rounded-3">
-                <div class="card-body mb-auto">
-                    <img src="${album.cover_medium}" class="card-img-top rounded-3" style="object-fit: cover;" alt="${album.title}" />
-                </div>
-                <div class="card-body d-flex flex-column align-item-baseline">
-                    <p class="fw-bold mb-1">${album.title}</p>
-                    <span class="text-secondary flex-grow-1">${artistName}</span>
-                </div>
+  // Crea un elemento div per la card
+  const cardDiv = document.createElement("div");
+  cardDiv.classList.add("col", "g-0", "m-0", "card-group", "pointer");
+  cardDiv.innerHTML = `
+        <div class="card bg-dark rounded-3">
+            <div class="card-body mb-auto">
+                <img src="${album.cover_medium}" class="card-img-top rounded-3" style="object-fit: cover;" alt="${album.title}" />
+            </div>
+            <div class="card-body d-flex flex-column align-item-baseline">
+                <p class="fw-bold mb-1 text-truncate">${album.title}</p>
+                <span class="text-secondary flex-grow-1">${artistName}</span>
             </div>
         </div>
     `;
+
+  // Aggiungi un listener di click alla card
+  cardDiv.addEventListener("click", () => {
+    // Redirect alla pagina dell'album con l'ID dell'album come parametro URL
+    window.location.href = `album.html?album_id=${album.id}`;
+  });
+
+  return cardDiv;
 }
+
+// // CARD PICCOLE
+// function createArtistCard(artist) {
+
+// 	// Crea un elemento div per la card
+// 	const cardDiv = document.createElement("div");
+// 	cardDiv.classList.add("col", "g-0", "m-0", "card-group", "pointer");
+
+// 	// Usa un template HTML differente per la card
+// 	cardDiv.innerHTML = `
+//         <div class="card bg-dark rounded-3">
+//             <div class="card-body mb-auto">
+//                 <img src="${artist.picture_medium}" class="card-img-top rounded-3" alt="${artist.name}" />
+//             </div>
+//             <div class="card-body d-flex flex-column align-item-baseline">
+//                 <p class="fw-bold mb-1 text-truncate">${artist.name}</p>
+//             </div>
+//         </div>
+//     `;
+
+// 	// Qui puoi aggiungere listener di eventi o altro, se necessario
+
+// 	return cardDiv;
+// }
+
+// const artistsContainer = document.getElementById("artists-container");
+
+// artists.forEach((artist) => {
+// 	const artistCard = createArtistCard(artist);
+// 	artistsContainer.appendChild(artistCard);
+// });
 
 async function loadAlbums() {
   const artists = ["Eminem", "Adele", "Drake", "Rihanna", "Ed Sheeran", "Taylor Swift"]; // Lista di artisti
@@ -109,8 +147,8 @@ async function loadAlbums() {
         const randomAlbumIndex = Math.floor(Math.random() * searchData.data.length);
         const album = searchData.data[randomAlbumIndex].album;
         // Chiamata alla funzione createAlbumCard
-        const albumCardHtml = createAlbumCard(album, searchData.data[randomAlbumIndex].artist.name);
-        albumsContainer.innerHTML += albumCardHtml; // Aggiungi la card al contenitore
+        const albumCard = createAlbumCard(album, searchData.data[randomAlbumIndex].artist.name);
+        albumsContainer.appendChild(albumCard); // Aggiungi la card al contenitore
       } else {
         console.log(`Nessun risultato trovato per ${artist}.`);
       }

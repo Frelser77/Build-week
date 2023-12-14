@@ -10894,6 +10894,10 @@ svg {
   background: #555;
 }
 
+#profileLink::before {
+  display: none;
+}
+
 .fixed-bottom {
   background-color: #333;
   color: white;
