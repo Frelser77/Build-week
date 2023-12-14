@@ -29,6 +29,7 @@
 }
 
 // Variabili per i colori
+$my-black: #000;
 $primary-color: #121212;
 $secondary-color: #2a2a2a;
 $footer-background-color: #333;
@@ -56,6 +57,10 @@ $btn-font-size: 0.9rem;
 
 .my-text-secondary {
 	color: #6c757d;
+}
+
+.my-black {
+	color: $my-black;
 }
 
 .left-bar {
@@ -186,7 +191,6 @@ svg {
 
 // Footer (Barra inferiore)
 .fixed-bottom {
-	height: $footer-height;
 	background-color: $footer-background-color;
 	color: white;
 	padding: 0 1rem;
@@ -219,7 +223,7 @@ $fg-color: #fff;
 $active-fg-color: #1db954;
 $progress-bar-height: 4px;
 
-// Applica gli stili all'input range
+// stili all'input range
 input[type="range"] {
 	--progress-bar-height: #{$progress-bar-height};
 	--bg-color: #{$bg-color};
@@ -275,4 +279,74 @@ input[type="range"] {
 #insideBar {
 	height: 5px;
 	width: 0;
+}
+
+/* Stili per il toggle del menu (il bottone che mostra/nasconde il dropdown) */
+.navbar-toggler {
+	border: none;
+	background-color: #333;
+}
+
+.navbar-toggler-icon {
+	background-image: url("path_to_your_icon_image"); /* Percorso all'icona personalizzata */
+}
+
+/* Stili per il menu dropdown */
+.nav-link.dropdown-toggle {
+	background-color: #000; /* Cambia con il colore desiderato */
+	color: #fff; /* Cambia con il colore del testo desiderato */
+	border-radius: 50px; /* Modifica per ottenere il bordo arrotondato desiderato */
+	padding: 0.25rem 1rem; /* Aggiungi padding se necessario */
+}
+
+/* Personalizzazione del menu a discesa */
+.dropdown-menu {
+	background-color: #000; /* Cambia con il colore dello sfondo desiderato */
+	border: none; /* Rimuove il bordo */
+	border-radius: 0.5rem; /* Aggiungi bordi arrotondati */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra per profondità */
+}
+
+/* Personalizzazione degli elementi del menu a discesa */
+.dropdown-item {
+	color: #fff; /* Cambia con il colore del testo desiderato */
+}
+
+/* Cambia il colore del testo al passaggio del mouse */
+.dropdown-item:hover,
+.dropdown-item:focus {
+	background-color: #333; /* Cambia con il colore desiderato per l'hover */
+	color: #fff;
+}
+
+/* Icona di dropdown personalizzata */
+.nav-link.dropdown-toggle::after {
+	content: url("path_to_your_custom_icon.png"); /* Percorso dell'icona personalizzata */
+	vertical-align: 0.255em;
+}
+
+/* Nascondi l'icona di default di Bootstrap */
+.nav-link.dropdown-toggle::after {
+	display: none;
+}
+
+.play-icon {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.icon-hover:hover .play-icon {
+	opacity: 1;
+}
+
+.hover:hover {
+	background-color: $my-black;
+	color: white;
+}
+
+#banner {
+	background: rgb(0, 0, 0);
+	background: -moz-linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
+	background: -webkit-linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
+	background: linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
 }

@@ -10832,6 +10832,10 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
+.my-black {
+  color: #000;
+}
+
 .left-bar {
   max-width: 90vh;
   overflow-y: auto;
@@ -10941,7 +10945,6 @@ svg {
 }
 
 .fixed-bottom {
-  height: 76px;
   background-color: #333;
   color: white;
   padding: 0 1rem;
@@ -11019,4 +11022,72 @@ input[type=range]::-webkit-slider-thumb:hover {
 #insideBar {
   height: 5px;
   width: 0;
+}
+
+/* Stili per il toggle del menu (il bottone che mostra/nasconde il dropdown) */
+.navbar-toggler {
+  border: none;
+  background-color: #333;
+}
+
+.navbar-toggler-icon {
+  background-image: url("path_to_your_icon_image"); /* Percorso all'icona personalizzata */
+}
+
+/* Stili per il menu dropdown */
+.nav-link.dropdown-toggle {
+  background-color: #000; /* Cambia con il colore desiderato */
+  color: #fff; /* Cambia con il colore del testo desiderato */
+  border-radius: 50px; /* Modifica per ottenere il bordo arrotondato desiderato */
+  padding: 0.25rem 1rem; /* Aggiungi padding se necessario */
+}
+
+/* Personalizzazione del menu a discesa */
+.dropdown-menu {
+  background-color: #000; /* Cambia con il colore dello sfondo desiderato */
+  border: none; /* Rimuove il bordo */
+  border-radius: 0.5rem; /* Aggiungi bordi arrotondati */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra per profondità */
+}
+
+/* Personalizzazione degli elementi del menu a discesa */
+.dropdown-item {
+  color: #fff; /* Cambia con il colore del testo desiderato */
+}
+
+/* Cambia il colore del testo al passaggio del mouse */
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #333; /* Cambia con il colore desiderato per l'hover */
+  color: #fff;
+}
+
+/* Icona di dropdown personalizzata */
+.nav-link.dropdown-toggle::after {
+  content: url("path_to_your_custom_icon.png"); /* Percorso dell'icona personalizzata */
+  vertical-align: 0.255em;
+}
+
+/* Nascondi l'icona di default di Bootstrap */
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+.play-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-hover:hover .play-icon {
+  opacity: 1;
+}
+
+.hover:hover {
+  background-color: #000;
+  color: white;
+}
+
+#banner {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(86deg, rgb(0, 0, 0) 12%, rgb(36, 36, 36) 50%, rgb(0, 0, 0) 99%);
 }/*# sourceMappingURL=style.css.map */
