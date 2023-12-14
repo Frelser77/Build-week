@@ -1,5 +1,4 @@
-@import "bootstrap-overrides.scss";
-:root {
+@import "bootstrap-overrides.scss";:root {
 	--bs-link-hover-color: #fff;
 	--bs-btn-border-color: transparent;
 	--bs-btn-hover-bg: transparent;
@@ -227,4 +226,46 @@ body {
 	border: 1px solid white;
 	background-color: black;
 	color: white;
+}
+
+thead th {
+	color: white;
+	font-weight: bold;
+}
+
+.numbertd {
+	width: 7%;
+	text-align: center;
+}
+
+.imgtd {
+	width: 28px;
+	height: 28px;
+}
+
+.due {
+	width: 7%;
+	text-align: left;
+}
+
+.canzonetd {
+	width: 25%;
+	text-align: left;
+}
+
+.ascoltatoritd {
+	width: 17%;
+	text-align: left;
+}
+
+.duratatd {
+	text-align: left;
+}
+
+tr td {
+	color: white;
+}
+
+table {
+	height: 60%;
 }
