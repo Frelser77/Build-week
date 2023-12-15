@@ -35,8 +35,20 @@ fetch(URL, {
     </div>
     `;
   })
+  .catch((error) => console.log(error));
+
+fetch(URL, {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": token,
+  },
+})
+  .then((resp) => resp.json())
   .then(({ artist, tracks }) => {
-    tracks.forEach((track) => {
+    const tracksArray = tracks.data;
+    for (let index = 0; index < tracksArray.length; index++) {
+      const track = tracksArray[index];
+
       const dur1 = track.duration;
       const string = dur1.toString();
       const tableBody = document.getElementById("tableBody");
@@ -51,6 +63,6 @@ fetch(URL, {
     <td>${string.slice(0, 1)} min ${string.slice(1)} sec</td>
   </tr>
   `;
-    });
+    }
   })
   .catch((error) => console.log(error));
