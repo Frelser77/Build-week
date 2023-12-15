@@ -29,6 +29,7 @@
 }
 
 // Variabili per i colori
+$my-black: #000;
 $primary-color: #121212;
 $secondary-color: #2a2a2a;
 $footer-background-color: #333;
@@ -69,6 +70,10 @@ $btn-font-size: 0.9rem;
 
 .my-m {
   margin-left: $margin-left-custom;
+}
+
+.my-black {
+  color: $my-black;
 }
 
 .my-bg-color {
@@ -298,6 +303,65 @@ input[type="range"] {
 // 	overflow-y: auto;
 // 	left: 12px;
 // }
+/* Stili per il menu dropdown */
+.nav-link.dropdown-toggle {
+  background-color: #000; /* Cambia con il colore desiderato */
+  color: #fff; /* Cambia con il colore del testo desiderato */
+  border-radius: 50px; /* Modifica per ottenere il bordo arrotondato desiderato */
+  padding: 0.25rem 1rem; /* Aggiungi padding se necessario */
+}
+
+/* Personalizzazione del menu a discesa */
+.dropdown-menu {
+  background-color: #000; /* Cambia con il colore dello sfondo desiderato */
+  border: none; /* Rimuove il bordo */
+  border-radius: 0.5rem; /* Aggiungi bordi arrotondati */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra per profonditÃ  */
+}
+
+/* Personalizzazione degli elementi del menu a discesa */
+.dropdown-item {
+  color: #fff; /* Cambia con il colore del testo desiderato */
+}
+
+/* Cambia il colore del testo al passaggio del mouse */
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #333; /* Cambia con il colore desiderato per l'hover */
+  color: #fff;
+}
+
+/* Icona di dropdown personalizzata */
+.nav-link.dropdown-toggle::after {
+  content: url("path_to_your_custom_icon.png"); /* Percorso dell'icona personalizzata */
+  vertical-align: 0.255em;
+}
+
+/* Nascondi l'icona di default di Bootstrap */
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+.play-icon {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-hover:hover .play-icon {
+  opacity: 1;
+}
+
+.hover:hover {
+  background-color: $my-black;
+  color: white;
+}
+
+#banner {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
+  background: -webkit-linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
+  background: linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
+}
 
 body {
   padding-bottom: $footer-height;
