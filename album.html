@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Simulation of a Soostify page for exame of API" />
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
-    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
-    <title>Spotifake</title>
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
+    <title>Album Page</title>
   </head>
   <body class="bg-black">
     <div class="container-fluid">
@@ -209,27 +209,103 @@
             <!-- CONTENT + RIGHT BAR -->
             <div class="col-9">
               <div class="row">
-                <div id="content" class="col-9 text-light my-bg-color">
-                  <div class="container-fluid d-flex my-5">
-                    <img src="./assets/imgs/main/image-10.jpg" width="200" height="200" class="shadowAlbum" alt="#" />
-                    <div class="d-flex flex-column ms-4 justify-content-end">
-                      <span class="fs-8 fw-bold">ALBUM</span>
-                      <h2 class="display-3 fw-bold mb-4">Prova titolo album</h2>
-                      <div class="d-flex">
-                        <img
-                          src="./assets/imgs/main/image-2.jpg"
-                          class="rounded-circle"
-                          width="25"
-                          height="25"
-                          alt="#"
-                        />
-                        <p class="ms-2 mb-0">
-                          Prova nome artista <span>- 2023 - 10 brani, </span
-                          ><span class="text-secondary">50 min 10 sec.</span>
-                        </p>
+                <div id="content" class="col-12 col-lg-9 text-light my-bg-color">
+                  <nav id="nav" class="navbar navbar-expand-lg sticky-top">
+                    <div class="container-fluid d-flex justify-content-evenly">
+                      <div class="d-flex align-items-center gap-1">
+                        <button
+                          id="scroll1"
+                          class="btn bg-black rounded-circle position-relative"
+                          style="width: 40px; height: 40px"
+                        >
+                          <a class="navbar-brand" href="#"
+                            ><svg
+                              data-encore-id="icon"
+                              role="img"
+                              aria-hidden="true"
+                              class="my-text-secondary position-absolut"
+                              style="top: 50%; left: 50%; transform: translate(5%, -20%)"
+                              width="15px"
+                              heigth="15px"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                            ></a
+                          >
+                        </button>
+                        <button
+                          id="scroll2"
+                          class="btn bg-black rounded-circle position-relative"
+                          style="width: 40px; height: 40px"
+                        >
+                          <a class="navbar-brand" href="#"
+                            ><svg
+                              data-encore-id="icon"
+                              role="img"
+                              aria-hidden="true"
+                              class="my-text-secondary position-absolut"
+                              style="top: 50%; left: 50%; transform: translate(5%, -20%)"
+                              width="15px"
+                              heigth="15px"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                            ></a
+                          >
+                        </button>
+                      </div>
+                      <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                      >
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto">
+                          <li class="nav-item dropstart">
+                            <a
+                              id="profileLink"
+                              class="nav-link dropdown-toggle text-light p-0"
+                              href="#"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <div class="d-flex align-items-center bg-black rounded pe-1">
+                                <img
+                                  src="./assets/imgs/main/cool-profile-pictures-retouching-1.webp"
+                                  width="20"
+                                  height="20"
+                                  class="rounded-circle"
+                                  alt="profile picture"
+                                />
+                                <span class="fs-7 text-light ms-1">Will Smith</span>
+                              </div>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                  </div>
+                  </nav>
+                  <div id="albumWrapper" class="container-fluid d-flex my-5"></div>
                   <div>
                     <button class="bg-transparent border border-0 me-4">
                       <svg
@@ -311,8 +387,8 @@
                           </th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
+                      <tbody id="tableBody">
+                        <!-- <tr>
                           <th scope="row">1</th>
                           <td class="pointer">
                             <p class="mb-1 text-light">Titolo canzone</p>
@@ -365,12 +441,12 @@
                           </td>
                           <td>465.356</td>
                           <td>3:40</td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
                 </div>
-                <div class="col-3 bg-black">
+                <div class="d-none d-lg-block col-lg-3 bg-black">
                   <div
                     id="side-right"
                     class="col-auto sticky-top right-bar d-none d-lg-block overflow-hidden rounded my-2"
@@ -687,7 +763,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="./JS/index.js" type="module"></script>
+    <script src="./JS/album_scrip.js" type="module"></script>
   </body>
 </html>
 
