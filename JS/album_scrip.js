@@ -52,17 +52,17 @@ fetch(URL, {
       const dur1 = track.duration;
       const string = dur1.toString();
       const tableBody = document.getElementById("tableBody");
-      tableBody.innerHTML = `
-    <tr>
-    <th scope="row">1</th>
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML = `
+    <th scope="row">${index + 1}</th>
     <td class="pointer">
       <p class="mb-1 text-light">${track.title}</p>
       <span>${artist.name}</span>
     </td>
     <td>${track.rank}</td>
     <td>${string.slice(0, 1)} min ${string.slice(1)} sec</td>
-  </tr>
   `;
+      tableBody.appendChild(tableRow);
     }
   })
   .catch((error) => console.log(error));
