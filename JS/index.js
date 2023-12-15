@@ -229,7 +229,7 @@ function createbannerCard(album, artistName) {
 	<div id="banner" class="card mb-3 position-relative">
     <div class="row g-0">
         <div class="col-md-4">
-            <img src="${album.cover_big}" class="img-fluid rounded-start" alt="${album.title}" width="210" height="210" />
+            <img id="bannerCover" src="${album.cover_big}" class="img-fluid rounded-start" alt="${album.title}" width="210" height="210" />
         </div>
         <div class="col-md-8">
             <div class="card-body">
@@ -292,3 +292,78 @@ async function loadBanner() {
 		console.error("Errore nel caricamento degli album:", error);
 	}
 }
+
+export function toggleSearch() {
+	const searchLabel = document.getElementById("search");
+	const searchInput = document.getElementById("searchInput");
+
+	// Toggle della visibilità dell'input e del label
+	if (searchLabel && searchInput) {
+		searchInput.classList.toggle("d-none");
+		searchLabel.classList.toggle("d-none");
+		if (!searchInput.classList.contains("d-none")) {
+			searchInput.focus();
+		}
+	}
+}
+
+document.querySelector(".search-icon").addEventListener("click", toggleSearch);
+document.getElementById("search").addEventListener("click", toggleSearch);
+
+async function performSearch() {
+	const searchValue = document.getElementById("searchInput").value.trim().toLowerCase();
+
+	if (!searchValue) {
+		console.log("Nessun valore inserito per la ricerca.");
+		return;
+	}
+
+	const searchUrl = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${encodeURIComponent(searchValue)}`;
+	const searchOptions = {
+		method: "GET",
+		headers: {
+			"X-RapidAPI-Key": token,
+			"X-RapidAPI-Host": host,
+		},
+	};
+
+	try {
+		const searchResponse = await fetch(searchUrl, searchOptions);
+		const searchData = await searchResponse.json();
+
+		if (searchData && searchData.data && searchData.data.length > 0) {
+			// Prendi l'ID dell'artista dal primo risultato della ricerca
+			const artistId = searchData.data[0].artist.id;
+			// Reindirizza alla pagina dell'artista utilizzando l'ID
+			window.location.href = `artists.html?id=${artistId}`;
+		} else {
+			console.log(`Nessun risultato trovato per "${searchValue}".`);
+		}
+	} catch (error) {
+		console.error("Errore nella ricerca:", error);
+	}
+}
+
+function updateSearchResults(results) {
+	const resultsContainer = document.getElementById("search-results");
+	resultsContainer.innerHTML = ""; // Pulisci i risultati precedenti
+
+	// results.forEach((result) => {
+	const result = document.createElement("div");
+	result.textContent = `${result.artist.name} - ${result.title}`;
+	resultsContainer.appendChild(result);
+
+	// Aggiungi il listener per il click che reindirizza alla pagina dell'artista
+	resultElement.addEventListener("click", () => {
+		// Qui si presuppone che ogni risultato abbia un campo 'artist' con un 'id'
+		window.location.href = `artista.html?id=${result.artist.id}`;
+	});
+	// });
+}
+
+// Aggiungi un event listener per eseguire la ricerca quando si preme 'Enter'
+document.getElementById("searchInput").addEventListener("keypress", function (event) {
+	if (event.key === "Enter") {
+		performSearch();
+	}
+});
