@@ -89,6 +89,7 @@ $btn-font-size: 0.9rem;
 		background-color: $hover-bg-color !important;
 	}
 }
+
 svg {
 	cursor: pointer;
 }
@@ -157,11 +158,6 @@ svg {
 .p-playlist {
 	color: $text-color;
 }
-
-// #playlist {
-// 	max-height: 70vh;
-// 	overflow-y: auto;
-// }
 
 #content {
 	max-height: 88vh;
@@ -291,6 +287,10 @@ input[type="range"] {
 	background-image: url("path_to_your_icon_image"); /* Percorso all'icona personalizzata */
 }
 
+.dropstart .dropdown-toggle::before {
+	display: none;
+}
+
 /* Stili per il menu dropdown */
 .nav-link.dropdown-toggle {
 	background-color: #000; /* Cambia con il colore desiderato */
@@ -349,4 +349,29 @@ input[type="range"] {
 	background: -moz-linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
 	background: -webkit-linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
 	background: linear-gradient(86deg, rgba(0, 0, 0, 1) 12%, rgba(36, 36, 36, 1) 50%, rgba(0, 0, 0, 1) 99%);
+}
+
+.artistbg {
+	background-image: url(./assets/imgs/main/yellowcard_2023_1280x1280_1676342674.jpg);
+	width: 100%;
+	height: 30.85vh;
+}
+
+.followbutton {
+	border: 1px solid white;
+	background-color: black;
+	color: white;
+}
+
+.imgtd {
+	width: 28px;
+	height: 28px;
+}
+
+tr td {
+	color: white;
+}
+
+.shadowAlbum {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
 }
