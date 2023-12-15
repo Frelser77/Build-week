@@ -287,6 +287,7 @@ input[type="range"] {
 	background-image: url("path_to_your_icon_image"); /* Percorso all'icona personalizzata */
 }
 
+/* DISPLAY NONE DROPDOWN TOOGLE*/
 .dropstart .dropdown-toggle::before {
 	display: none;
 }
@@ -321,7 +322,7 @@ input[type="range"] {
 
 /* Icona di dropdown personalizzata */
 .nav-link.dropdown-toggle::after {
-	content: url("path_to_your_custom_icon.png"); /* Percorso dell'icona personalizzata */
+	content: url("./assets/imgs/main/cool-profile-pictures-retouching-1.webp");
 	vertical-align: 0.255em;
 }
 
@@ -352,7 +353,7 @@ input[type="range"] {
 }
 
 .artistbg {
-	background-image: url(./assets/imgs/main/yellowcard_2023_1280x1280_1676342674.jpg);
+	// background-image: url(./assets/imgs/main/yellowcard_2023_1280x1280_1676342674.jpg);
 	width: 100%;
 	height: 30.85vh;
 }
@@ -374,4 +375,10 @@ tr td {
 
 .shadowAlbum {
 	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#bgArtist {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
